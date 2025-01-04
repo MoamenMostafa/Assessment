@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  sql_server:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: sql_server_container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - "1433:1433"  # Default SQL Server port
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - app_network
+
+  redis:
+    image: redis:latest
+    container_name: redis_container
+    ports:
+      - "6379:6379"  # Default Redis port
+    networks:
+      - app_network
+
+  management_api:
+    image: management-api
+    container_name: management_api_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"  # Default API port
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sql_server;Database=ManagementDB;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True
+      - Redis__ConnectionString=redis:6379 # Add Redis connection string
+    depends_on:
+      - sql_server
+      - redis
+    networks:
+      - app_network
+
+volumes:
+  sql_data:
+
+networks:
+  app_network:
+    driver: bridge

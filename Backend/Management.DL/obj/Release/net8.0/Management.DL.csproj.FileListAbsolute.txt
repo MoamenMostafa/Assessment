@@ -1,0 +1,14 @@
+C:\Assessment\Backend\Management.DL\bin\Release\net8.0\Management.DL.deps.json
+C:\Assessment\Backend\Management.DL\bin\Release\net8.0\Management.DL.runtimeconfig.json
+C:\Assessment\Backend\Management.DL\bin\Release\net8.0\Management.DL.dll
+C:\Assessment\Backend\Management.DL\bin\Release\net8.0\Management.DL.pdb
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.csproj.AssemblyReference.cache
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.AssemblyInfoInputs.cache
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.AssemblyInfo.cs
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.csproj.CoreCompileInputs.cache
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.dll
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\refint\Management.DL.dll
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.pdb
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\Management.DL.genruntimeconfig.cache
+C:\Assessment\Backend\Management.DL\obj\Release\net8.0\ref\Management.DL.dll

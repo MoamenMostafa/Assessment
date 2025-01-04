@@ -1,0 +1,15 @@
+C:\Assessment\Backend\Management.BL\bin\Release\net8.0\Management.BL.deps.json
+C:\Assessment\Backend\Management.BL\bin\Release\net8.0\Management.BL.dll
+C:\Assessment\Backend\Management.BL\bin\Release\net8.0\Management.BL.pdb
+C:\Assessment\Backend\Management.BL\bin\Release\net8.0\Management.DL.dll
+C:\Assessment\Backend\Management.BL\bin\Release\net8.0\Management.DL.pdb
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.csproj.AssemblyReference.cache
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.AssemblyInfoInputs.cache
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.AssemblyInfo.cs
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.csproj.CoreCompileInputs.cache
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.csproj.CopyComplete
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.dll
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\refint\Management.BL.dll
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\Management.BL.pdb
+C:\Assessment\Backend\Management.BL\obj\Release\net8.0\ref\Management.BL.dll
