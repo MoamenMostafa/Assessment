@@ -1,0 +1,68 @@
+.add-product-card {
+    .p-card-header {
+      padding: 1rem;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ddd;
+  
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .header-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .back-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  
+    .p-card-body {
+      padding: 2rem;
+  
+      .form-row {
+        margin-bottom: 1.5rem;
+      }
+  
+      .form-label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #555;
+      }
+  
+      input, textarea, p-dropdown {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+  
+      .p-error {
+        font-size: 0.85rem;
+        color: #f44336;
+        margin-top: 0.25rem;
+      }
+    }
+  
+    .p-card-footer {
+      padding: 1rem;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+  
+      .footer-text {
+        font-size: 0.9rem;
+        color: #777;
+      }
+    }
+  
+    .save-button {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  

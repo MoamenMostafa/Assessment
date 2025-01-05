@@ -1,0 +1,118 @@
+<div class="p-card add-product-card">
+  <div class="p-card-header">
+    <div class="header-container">
+      <h2 class="header-title">Add New Product</h2>
+      <button
+        pButton
+        label="Back to Products"
+        icon="pi pi-arrow-left"
+        class="p-button-secondary back-button"
+        [routerLink]="['/products']">
+      </button>
+    </div>
+  </div>
+
+  <div class="p-card-body">
+    <form (ngSubmit)="onSave()" #productForm="ngForm">
+      <!-- Product Name -->
+      <div class="p-field p-grid form-row">
+        <label for="name" class="p-col-12 p-md-3 form-label">Product Name</label>
+        <div class="p-col-12 p-md-9">
+          <input
+            id="name"
+            type="text"
+            pInputText
+            [(ngModel)]="newProduct.name"
+            name="name"
+            required
+            placeholder="Enter product name"
+            [ngClass]="{'p-invalid': productForm.submitted && !newProduct.name}" />
+          <p class="p-error" *ngIf="productForm.submitted && !newProduct.name">
+            Product Name is required
+          </p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="p-field p-grid form-row">
+        <label for="description" class="p-col-12 p-md-3 form-label">Description</label>
+        <div class="p-col-12 p-md-9">
+          <textarea
+            id="description"
+            pInputTextarea
+            [(ngModel)]="newProduct.description"
+            name="description"
+            rows="3"
+            placeholder="Enter a short description of the product">
+          </textarea>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="p-field p-grid form-row">
+        <label for="price" class="p-col-12 p-md-3 form-label">Price</label>
+        <div class="p-col-12 p-md-9">
+          <input
+            id="price"
+            type="number"
+            pInputText
+            [(ngModel)]="newProduct.price"
+            name="price"
+            required
+            placeholder="Enter price" />
+        </div>
+      </div>
+
+      <!-- Stock Quantity -->
+      <div class="p-field p-grid form-row">
+        <label for="stockQuantity" class="p-col-12 p-md-3 form-label">Stock Quantity</label>
+        <div class="p-col-12 p-md-9">
+          <input
+            id="stockQuantity"
+            type="number"
+            pInputText
+            [(ngModel)]="newProduct.stockQuantity"
+            name="stockQuantity"
+            required
+            placeholder="Enter stock quantity" />
+        </div>
+      </div>
+
+      <!-- Status Dropdown -->
+      <div class="p-field p-grid form-row">
+        <label for="status" class="p-col-12 p-md-3 form-label">Status</label>
+        <div class="p-col-12 p-md-9">
+          <p-dropdown
+            [(ngModel)]="newProduct.status"
+            [options]="productStatuses"
+            name="status"
+            placeholder="Select status"
+            [ngClass]="{'p-invalid': productForm.submitted && !newProduct.status}">
+          </p-dropdown>
+          <p class="p-error" *ngIf="productForm.submitted && !newProduct.status">
+            Product Status is required
+          </p>
+        </div>
+      </div>
+
+      <!-- Save Button -->
+      <div class="p-field p-grid form-row">
+        <div class="p-col-12 p-md-9 offset-md-3">
+          <button
+            pButton
+            id="saveButton"
+            type="submit"
+            label="Save Product"
+            icon="pi pi-check"
+            class="p-button-success save-button"
+            [disabled]="productForm.invalid">
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="p-card-footer footer-text">
+    <p>Manage your products effectively with this intuitive interface.</p>
+  </div>
+</div>

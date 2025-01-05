@@ -1,0 +1,78 @@
+<div class="p-card add-category-card">
+  <div class="p-card-header">
+    <h2>Add New Category</h2>
+    <button 
+      pButton 
+      label="Back to Categories" 
+      icon="pi pi-list" 
+      class="p-button-primary p-ml-2"
+      [routerLink]="['/']">
+    </button>
+  </div>
+
+  <div class="p-card-body">
+    <form (ngSubmit)="onSave()" #categoryForm="ngForm">
+      <div class="p-field p-grid">
+        <label for="name" class="p-col-12 p-md-3">Category Name</label>
+        <div class="p-col-12 p-md-9">
+          <input 
+            id="name" 
+            type="text" 
+            pInputText 
+            [(ngModel)]="newCategory.name" 
+            name="name" 
+            required 
+            placeholder="Enter category name" 
+            [ngClass]="{'p-invalid': categoryForm.submitted && !newCategory.name}" />
+          <p class="p-error" *ngIf="categoryForm.submitted && !newCategory.name">
+            Category Name is required
+          </p>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="description" class="p-col-12 p-md-3">Description</label>
+        <div class="p-col-12 p-md-9">
+          <textarea 
+            id="description" 
+            pInputTextarea 
+            [(ngModel)]="newCategory.description" 
+            name="description" 
+            rows="3" 
+            placeholder="Enter a short description of the category">
+          </textarea>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <label for="status" class="p-col-12 p-md-3">Status</label>
+        <div class="p-col-12 p-md-9">
+          <p-dropdown 
+            [(ngModel)]="newCategory.status"
+            [options]="categoryStatuses"
+            name="status"
+            placeholder="Select status"
+            [ngClass]="{'p-invalid': categoryForm.submitted && !newCategory.status}">
+          </p-dropdown>
+          <p class="p-error" *ngIf="categoryForm.submitted && !newCategory.status">
+            Category Status is required
+          </p>
+        </div>
+      </div>
+
+      <div class="p-field p-grid">
+        <div class="p-col-12 p-md-9 offset-md-3">
+          <button 
+            pButton 
+            id="saveButton" 
+            type="submit" 
+            label="Save Category" 
+            icon="pi pi-check" 
+            class="p-button-success p-mt-2"
+            [disabled]="categoryForm.invalid">
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
