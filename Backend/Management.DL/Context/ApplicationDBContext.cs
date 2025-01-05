@@ -26,9 +26,9 @@ namespace Management.DL.Context
             optionsBuilder.UseSqlServer(
                 _configuration.GetConnectionString("DefaultConnection"),
                 options => options.EnableRetryOnFailure(
-                    maxRetryCount: 5,              // Maximum number of retries
-                    maxRetryDelay: TimeSpan.FromSeconds(30), // Maximum delay between retries
-                    errorNumbersToAdd: null        // Optional: SQL error codes to retry
+                    maxRetryCount: 5,             
+                    maxRetryDelay: TimeSpan.FromSeconds(30), 
+                    errorNumbersToAdd: null       
                 )
             );
         }

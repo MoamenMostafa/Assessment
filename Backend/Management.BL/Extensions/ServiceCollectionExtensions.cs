@@ -12,7 +12,6 @@ namespace Management.BL.Extensions
     {
         public static IServiceCollection AddDataAccessLayer(this IServiceCollection services)
         {
-            // Register repositories
             services.AddScoped<IRepository<Product>, Repository<Product>>();
             services.AddScoped<IRepository<Category>, Repository<Category>>();
             return services;
@@ -23,7 +22,7 @@ namespace Management.BL.Extensions
             services.AddDbContext<ApplicationDBContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly("Management.DL") // Specify the migrations assembly
+                    b => b.MigrationsAssembly("Management.DL") 
                 )
             );
             return services;
